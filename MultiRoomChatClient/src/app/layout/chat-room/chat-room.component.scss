@@ -1,0 +1,71 @@
+.chat-room-main {
+    position: absolute;
+    width: 70vw;
+    top: 10vh;
+    height: 80vh;
+    margin-top: 2vh;
+    background-color: rgba(119, 119, 119, 0.5);
+}
+
+.chat-room-input {
+    position: absolute;
+    bottom: 5vh;
+    left: 12vw;
+    width: 100%;
+}
+
+.chat-room-input>input {
+    width: 70%;
+}
+
+.chat-room-side-bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding-top: 5vh;
+    width: 10vw;
+}
+
+.chat-room-chat {
+    position: absolute;
+    top: 0;
+    bottom: 25%;
+    left: 10vw;
+    width: 58vw;
+}
+
+.chat-room-emoji-picker {
+    display: inline-block;
+    padding: 1vh;
+}
+
+.chat-room-emoji-picker:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.chat-room-button {
+    height: 4vh;
+    width: 5vw;
+}
+
+.chat-message {
+    padding: 1vh;
+    border-radius: 10px;
+    background-color: rgb(183, 238, 235);
+    margin-bottom: 1vh;
+}
+
+.chat-my-message {
+    background-color: rgb(200, 231, 250);
+    text-align: right;
+}
+
+.chat-user {
+    font-weight: bold;
+}
+
+.chat-user-menu {
+    padding: 0.5vh;
+    margin-left: 1vw;
+}

@@ -1,0 +1,32 @@
+<div class="join">
+    <div class = "join-button" (click) = "toogleOpen()">
+        <div>
+            Join..
+        </div>        
+    </div> 
+
+    <div class = "join-menu" [ngStyle] = "{'display': (open ? 'block': 'none')}">
+        <div class="create">
+            <input type="text" [ngStyle] = "{'margin-bottom': '4vh'}" placeholder = "Choose nick name..." [(ngModel)] = "userName" (input) = "setCreateDisabled()">
+            <div class="text-line">
+                and then:
+            </div>            
+            <input type="text" placeholder = "Choose new room name..." [(ngModel)] = "roomName" (input) = "setCreateDisabled()">
+            <button  (click) = "joinRoom()">Create New Room</button>
+        </div>
+
+        <div class="available-rooms" *ngIf = "rooms.length > 0">
+            <div class="text-line">
+                or choose one from the list:
+            </div>
+            <div class="room" *ngFor = "let r of rooms" (click) = "joinRoom(r.roomName)"> {{r.roomName}} ({{r.count}}) </div>
+        </div>
+    </div>   
+</div>
+
+<div class="body" *ngIf = "tabs.length > 0">
+    <app-nav-bar [tabs] = "tabs" [selectedTab] = "active_tab_index" (activeTab) = "setSelected($event)"></app-nav-bar>
+    <app-chat-room [users] = "active_tab_users" [userName] = "userName" [messages] = "active_tab_messages" (sendMessage) = "emitMessage($event)"></app-chat-room>
+</div>
+
+<app-error [error] = "error"></app-error>

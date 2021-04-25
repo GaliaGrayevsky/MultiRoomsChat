@@ -1,0 +1,3 @@
+<div class="emoji-main">
+    <div class="emoji-icon" *ngFor = "let e of emojiArr" [innerHtml] = "e" (click) = "emitEmoji($event)"></div>
+</div>

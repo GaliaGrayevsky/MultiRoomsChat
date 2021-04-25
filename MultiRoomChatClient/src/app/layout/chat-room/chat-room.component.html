@@ -1,0 +1,24 @@
+<div class="chat-room-main">
+    <div class="chat-room-side-bar">
+        <div class= "chat-user chat-user-menu"> Users in the room:</div> 
+        <div *ngFor = "let u of users">
+            <div class= "chat-user chat-user-menu"> {{ u }} </div>            
+        </div>
+    </div>
+    <div class="chat-room-chat">
+        <div class = "chat-message" [ngClass] = "m.user == userName ? ' chat-my-message' : ''" *ngFor = "let m of messages">
+           <div class = "chat-user"> {{m.user}} </div>        
+            <div class = "chat-message-body">
+                {{m.message}}
+            </div>    
+        </div>
+    </div>
+    <div class="chat-room-input">
+        <input type="text" name = "chat_message_input" [(ngModel)] = "messageText"  (input) = "onInput()">
+        <div class = "chat-room-emoji-picker" (click) = "show_emoji_list=!show_emoji_list ">
+            <p [innerHtml] = "emojiIcon"></p>
+            <app-emojis [ngStyle] = "{'display' : show_emoji_list ? 'block': 'none'}" (emoji) = "addEmoji($event)"></app-emojis>
+        </div>
+        <button class = "chat-room-button" [disabled]="is_disabled" (click) = "send()">Send</button>
+    </div>
+</div>

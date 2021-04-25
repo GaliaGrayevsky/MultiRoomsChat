@@ -1,0 +1,81 @@
+.join {
+    position: fixed;
+    left: 1vw;
+    top: 1vh;
+    width: 20vw;
+}
+
+.join-button {
+    //border: 1pt solid;
+    //border-radius: 30px;
+    padding: 2vh;
+    width: 5vw;    
+    border:solid 2px #41403E;
+    align-self:center;
+    background:transparent;
+    padding:1rem 1rem;
+    margin:0 1rem;
+    transition:all .5s ease;
+    color:#41403E;
+    //font-size:2rem;
+    letter-spacing:1px;
+    outline:none;
+    box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+
+    &:hover {
+        box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+    }
+}
+
+.join-button > div {
+    font-family: 'permm' !important;
+}
+
+.join-menu {
+    position: absolute;
+    left: 0;
+    top: 10vh;
+    width: 100%;
+    height: 80vh;
+    overflow-y: auto;
+    padding: 2vh;
+}
+
+.body {
+    position: fixed;
+    top: 1vh;
+    left: 25vw;
+}
+
+.available-rooms {
+    text-align: center;
+}
+
+.create > button, .room {
+    padding: 1vh;
+}
+
+.create > *, .room {
+    margin-bottom: 1vh;
+
+    &:hover {
+        background-color: rgba(#000000, 0.3);
+    }
+}
+
+.text-line {
+    font-weight: bold;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    text-align: center;
+}
+
+.room {
+    border: solid 2px #41403E;
+    border-radius: 20px;
+}
+
+.create > input {
+    width: 100%;
+}

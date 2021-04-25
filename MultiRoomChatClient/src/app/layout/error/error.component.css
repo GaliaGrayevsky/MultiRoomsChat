@@ -1,0 +1,7 @@
+.error {
+    position: fixed;
+    top: 10vh;
+    right: 20vw;
+    padding: 5vh;
+    background-color: coral;
+}

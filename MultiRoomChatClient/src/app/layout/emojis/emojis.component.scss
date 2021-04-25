@@ -1,0 +1,24 @@
+.emoji-main {
+    position: absolute;
+    right: 14vw;
+    bottom: 0vw;
+    width: 19vw;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 25;
+    opacity:  1;
+    background-color: white;
+    margin: 1vh;
+    border: 1px solid lightgray
+ }
+
+.emoji-icon {
+    margin: 0.3vh;
+    padding: 0.2vh;
+} 
+
+.emoji-icon:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+

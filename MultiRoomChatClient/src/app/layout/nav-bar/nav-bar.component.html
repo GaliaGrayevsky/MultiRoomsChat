@@ -1,0 +1,8 @@
+<div class="nav-main">
+    <div class="nav-tab" 
+        [ngClass] = "indx == selectedTab ? ' nav-tab-ctive' : ''" 
+        [ngStyle] = "{'width': tabWidth + '%'}"
+        *ngFor = "let t of tabs; let indx = index" (click) = "changeActiveTab(indx)">
+        {{t}}
+    </div>
+</div>
